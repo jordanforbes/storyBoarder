@@ -1,16 +1,17 @@
-imoprt { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+
+// import { Observable, of } from 'rxjs';
 
 import { Char } from './char';
-import { CHARS } from './fakechars';
+import { CHARACTERS } from './fakechars';
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 
-getChars(): void {
-	this.charService.getChars()
-		.subscribe(chars => this.chars = chars);
+getChars(): Char[]{
+	return CHARACTERS;
 }
 
 export class CharService {

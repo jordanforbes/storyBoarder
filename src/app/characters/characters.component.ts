@@ -13,15 +13,24 @@ import { CharService } from '../char.service';
 export class CharactersComponent implements OnInit {
 
 
-	chars: Char[];
+	CHARACTERS: Char[];
 
-  constructor() { }
+  constructor() { 
+  	constructor(private charService: CharService){
+
+  	}
+  }
 
   ngOnInit() {
+    this.getChars();
   }
 
   onSelect(char: Char): void {
   	this.selectedChar = char;
+  }
+
+  getChars(): void{
+  	this.chars = this.CharService.getChars(); 
   }
 
 }
