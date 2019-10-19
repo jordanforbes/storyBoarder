@@ -8,12 +8,14 @@ import { AppComponent } from './app.component';
 import { CharactersComponent } from './characters/characters.component';
 // import { FormsModule } from '@angular/forms';
 import { CharacterDetailComponent } from './character-detail/character-detail.component';
+import { SettingComponent } from './setting/setting.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     CharactersComponent,
-    CharacterDetailComponent
+    CharacterDetailComponent,
+    SettingComponent
   ],
   imports: [
     BrowserModule,
