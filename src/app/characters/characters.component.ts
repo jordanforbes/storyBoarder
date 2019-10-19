@@ -19,7 +19,7 @@ export class CharactersComponent implements OnInit {
   ngOnInit() {
   }
 
-  onSelect(char: CHAR): void {
+  onSelect(char: Char): void {
   	this.selectedChar = char;
   }
 
