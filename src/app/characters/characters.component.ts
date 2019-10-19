@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Char } from '../char';
 import { CHARACTERS } from '../fakechars';
+import { CharService } from '../char.service';
 
 @Component({
   selector: 'app-characters',
@@ -11,8 +12,8 @@ import { CHARACTERS } from '../fakechars';
 
 export class CharactersComponent implements OnInit {
 
-	characters = CHARACTERS;
-	selectedChar: Char;
+
+	chars: Char[];
 
   constructor() { }
 
